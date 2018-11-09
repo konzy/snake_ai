@@ -61,11 +61,11 @@ class SnakeGame:
         print(self.walls + self.snake - self.apple)
 
     def get_board(self):
-        walls = self.walls.reshape((self.wall_height, self.wall_width, 1))
+        # walls = self.walls.reshape((self.wall_height, self.wall_width, 1))
         snake = self.snake.reshape((self.wall_height, self.wall_width, 1))
         apple = self.apple.reshape((self.wall_height, self.wall_width, 1))
 
-        return np.concatenate((walls, snake, apple))
+        return np.concatenate((snake, apple))
 
     # returns 0 to continue, 1 for end of game
     def move(self, m):
